@@ -12,9 +12,11 @@ class AppServiceProvider extends ServiceProvider
      * @return void
      */
     public function register()
-    {
-        //
+{
+    if ($this->app->environment() !== 'production') {
+        $this->app->register(\Sven\ArtisanView\ServiceProvider::class);
     }
+}
 
     /**
      * Bootstrap any application services.
