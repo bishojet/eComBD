@@ -1,5 +1,5 @@
 	<!--main area-->
-	<main id="main" class="main-site left-sidebar" >
+	<main id="main" class="main-site left-sidebar"  wire:click="$refresh" >
 
 		<div class="container">
 
@@ -79,11 +79,14 @@
 
 
 
+
 					</div>
 
-
-                    <div class="wrap-pagination-info page-numbers">
+                    <div class="pagination">
                         {{ $products->links() }}
+                    </div>
+
+
 
 
 
@@ -95,7 +98,7 @@
 							<li><a class="page-number-item next-link" href="#" >Next</a></li>
 						</ul>
 						<p class="result-count">Showing 1-8 of 12 result</p> --}}
-					</div>
+
 				</div><!--end main products area-->
 
 				<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 sitebar">

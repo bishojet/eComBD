@@ -1,8 +1,20 @@
-<div>
+<div class="d-flex justify-content-between">
     @if ($paginator->hasPages())
         @php(isset($this->numberOfPaginatorsRendered[$paginator->getPageName()]) ? $this->numberOfPaginatorsRendered[$paginator->getPageName()]++ : $this->numberOfPaginatorsRendered[$paginator->getPageName()] = 1)
-        
-        <nav>
+
+        <nav class="d-flex justify-content-between align-items-center">
+            <div>
+                <p class="">
+                    <span>{!! __('Showing') !!}</span>
+                    <span class="">{{ $paginator->firstItem() }}</span>
+                    <span>{!! __('to') !!}</span>
+                    <span class="">{{ $paginator->lastItem() }}</span>
+                    <span>{!! __('of') !!}</span>
+                    <span class="">{{ $paginator->total() }}</span>
+                    <span>{!! __('results') !!}</span>
+                </p>
+            </div>
+
             <ul class="pagination">
                 {{-- Previous Page Link --}}
                 @if ($paginator->onFirstPage())

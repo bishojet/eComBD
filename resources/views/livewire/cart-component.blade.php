@@ -1,5 +1,5 @@
 	<!--main area-->
-	<main id="main" class="main-site">
+	<main id="main" class="main-site" wire:click="$refresh">
 
 		<div class="container">
 
